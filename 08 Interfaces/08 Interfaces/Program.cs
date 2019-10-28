@@ -6,7 +6,9 @@ namespace _08_Interfaces
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Notification note1 = new Notification("Philip", "When are you coming?", "24 Oct 2019");
+            note1.showNotifications();
+
         }
     }
 }
