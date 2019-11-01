@@ -18,7 +18,9 @@ namespace _09_01_Polymorphic_Parameters
                 car1.Repair();
             }
             Car bmwZ3 = new BMW("330", "White", "M3");
+            bmwZ3.SetCarIDInfo(25672, "PhilB");
             bmwZ3.ShowDetails();
+            bmwZ3.GetCarIDInfo();
             Console.ReadKey();
             
         }

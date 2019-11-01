@@ -9,6 +9,20 @@ namespace _09_01_Polymorphic_Parameters
         protected string HP { get; set; }
         protected string Color { get; set; }
 
+        // has a relationship
+        protected CarIDInfo carIDinfo = new CarIDInfo();
+
+        public void SetCarIDInfo(int idNum, string owner)
+        {
+            carIDinfo.IDNum = idNum;
+            carIDinfo.Owner = owner;
+        }
+
+        public void GetCarIDInfo()
+        {
+            Console.WriteLine("The car has the id of {0} and is owned by {1}", carIDinfo.IDNum, carIDinfo.Owner);
+        }
+
         public Car()
         {
             this.HP = "135";
