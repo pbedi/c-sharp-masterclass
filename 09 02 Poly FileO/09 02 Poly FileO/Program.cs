@@ -13,7 +13,7 @@ namespace _09_02_Poly_FileO
 
             string[] lines = System.IO.File.ReadAllLines(@"C:\Users\pbedi\source\repos\c-sharp-masterclass\assets\textFile.txt");
 
-            Console.WriteLine("Contnts of textFile.txt is = ");
+            Console.WriteLine("Content of textFile.txt is = ");
 
             foreach(string line in lines)
             {
@@ -26,7 +26,7 @@ namespace _09_02_Poly_FileO
             write.WriteDetails(lines1);
 
             //method 3
-            string[] lines2 = { "250", "242", "Third 240" };
+            string[] lines2 = { "250", "242 Third", "Third 240" };
 
             using(StreamWriter file = new StreamWriter(@"C:\Users\pbedi\source\repos\c-sharp-masterclass\assets\myTextFile.txt"))
             {
@@ -38,6 +38,13 @@ namespace _09_02_Poly_FileO
                     }
                 }
             }
+            Console.WriteLine("File myTextFile.txt updated ");
+
+            using (StreamWriter file = new StreamWriter(@"C:\Users\pbedi\source\repos\c-sharp-masterclass\assets\myTextFile.txt", true))
+            {
+                file.WriteLine("Additional line");
+            }
+            Console.WriteLine("File myTextFile.txt updated with additional text ");
         }
     }
 }
