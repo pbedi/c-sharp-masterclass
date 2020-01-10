@@ -1,0 +1,13 @@
+﻿<Window x:Class="_13_WPF01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_13_WPF01"
+        mc:Ignorable="d"
+        Title="My First GUI" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="351,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Hello "/><Run Text="Philip"/></TextBlock>
+        <Button Content="Click me" Height="50" Name="btn" Width="150" Margin="308,236,334,133" Click="Button_Click" />
+    </Grid>
+</Window>
