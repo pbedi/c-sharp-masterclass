@@ -1,0 +1,19 @@
+﻿<Window x:Class="_13_WPF06_Databinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_13_WPF06_Databinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <!--<TextBox Margin="20" Width="100" Height="30" Text="{Binding ElementName=MySlider, Path=Value, Mode=OneWay}"></TextBox>-->
+        <!-- For following two way, you have to press tab after entering number -->
+        <!--<TextBox Margin="50" Width="100" Height="30" Text="{Binding ElementName=MySlider, Path=Value, Mode=TwoWay}"></TextBox>-->
+        <!--<TextBox Margin="20" Width="100" Height="30" Text="{Binding ElementName=MySlider, Path=Value, Mode=OneWayToSource}"></TextBox>-->
+        <!--<TextBox Name="MyTextBox" Margin="20" Width="100" Height="30" Text="{Binding ElementName=MySlider, Path=Value, Mode=OneTime}"></TextBox>-->
+        <!-- For following two way, setting up trigger -->
+        <TextBox Margin="50" Width="100" Height="30" Text="{Binding ElementName=MySlider, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Slider IsSnapToTickEnabled="True" Name="MySlider" Minimum="0" Maximum="100"></Slider>
+    </StackPanel>
+</Window>
