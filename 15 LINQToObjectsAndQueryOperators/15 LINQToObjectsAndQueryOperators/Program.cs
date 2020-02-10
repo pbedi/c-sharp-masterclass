@@ -31,6 +31,7 @@ namespace _15_LINQToObjectsAndQueryOperators
                 Console.WriteLine("{0}) number is {1}", counter, k);
                 counter++;
             }
+            universityManager.StudentsAndNameCollection();
             Console.ReadLine();
         }
     }

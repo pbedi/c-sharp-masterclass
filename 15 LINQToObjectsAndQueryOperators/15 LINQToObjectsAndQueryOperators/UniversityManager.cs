@@ -72,5 +72,18 @@ namespace _15_LINQToObjectsAndQueryOperators
                 student.Print();
             }
         }
+
+        public void StudentsAndNameCollection()
+        {
+            var newCollection = from student in students
+                                join university in universities on student.UniversityId equals university.Id
+                                orderby student.Name
+                                select new { StudentName = student.Name, UniversityName = university.Name };
+            Console.WriteLine("New Collecion: ");
+            foreach(var coll in newCollection)
+            {
+                Console.WriteLine("Student {0} from University {1}", coll.StudentName, coll.UniversityName);
+            }
+        }
     }
 }
